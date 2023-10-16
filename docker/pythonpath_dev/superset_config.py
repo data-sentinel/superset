@@ -100,13 +100,21 @@ class CeleryConfig(object):
 
 CELERY_CONFIG = CeleryConfig
 
-FEATURE_FLAGS = {"ALERT_REPORTS": True}
+FEATURE_FLAGS = {"ALERT_REPORTS": True, "HORIZONTAL_FILTER_BAR": True, "DASHBOARD_RBAC": True}
 ALERT_REPORTS_NOTIFICATION_DRY_RUN = True
 WEBDRIVER_BASEURL = "http://superset:8088/"
 # The base URL for the email report hyperlinks.
 WEBDRIVER_BASEURL_USER_FRIENDLY = WEBDRIVER_BASEURL
 
 SQLLAB_CTAS_NO_LIMIT = True
+
+PUBLIC_ROLE_LIKE_GAMMA = True
+PUBLIC_ROLE_LIKE = 'Gamma'
+AUTH_ROLE_PUBLIC = 'Public'
+WTF_CSRF_ENABLED = False
+SESSION_COOKIE_SAMESITE = None
+SESSION_COOKIE_HTTPONLY = False
+SESSION_COOKIE_SECURE = False
 
 #
 # Optionally import superset_config_docker.py (which will have been included on
